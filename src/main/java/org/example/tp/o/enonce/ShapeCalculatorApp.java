@@ -1,5 +1,8 @@
 package org.example.tp.o.enonce;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /*
 
 Dans ce fichier, vous trouverez une violation du Principe Ouvert/Fermé (Open/Closed Principle).
@@ -27,14 +30,19 @@ Note : Concentrez-vous sur la conception de solutions flexibles et extensibles q
 
 public class ShapeCalculatorApp {
     public static void main(String[] args) {
-        Circle c1 = new Circle(10.0);
+        Circle c1 = new Circle(5);
         Rectangle r1 = new Rectangle(5, 5);
+        ArrayList<Shape> lst = new ArrayList<Shape>();
+        lst.add(r1);lst.add(c1);
+        System.out.println(ShapeCalculatorApp.shapeCalculateToTalArea(lst));
+    }
 
-        ShapeCalculatorI cc = new CircleCalculator();
-        System.out.println(cc.calculateArea(c1));
-
-        ShapeCalculatorI rc = new RectangleCalculator();
-        System.out.println(rc.calculateArea(r1));
+    public static double shapeCalculateToTalArea(List<Shape> shapes){
+        double sum = 0.0;
+        for(Shape shape : shapes){
+            sum += shape.calculateArea();
+        }
+        return sum;
     }
 }
 
