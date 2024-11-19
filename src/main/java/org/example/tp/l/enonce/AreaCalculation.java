@@ -32,6 +32,6 @@ public class AreaCalculation {
         System.out.println("Aire du rectangle : " + rectangle.calculateArea());
 
         Square square = new Square(2);
-        System.out.println("Aire du rectangle : " + square.calculateArea());
+        System.out.println("Aire du carre : " + square.calculateArea());
     }
 }
