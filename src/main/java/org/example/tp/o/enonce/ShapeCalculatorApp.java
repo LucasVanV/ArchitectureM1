@@ -30,10 +30,10 @@ public class ShapeCalculatorApp {
         Circle c1 = new Circle(10.0);
         Rectangle r1 = new Rectangle(5, 5);
 
-        ShapeCalculator cc = new CircleCalculator();
+        ShapeCalculatorI cc = new CircleCalculator();
         System.out.println(cc.calculateArea(c1));
 
-        ShapeCalculator rc = new RectangleCalculator();
+        ShapeCalculatorI rc = new RectangleCalculator();
         System.out.println(rc.calculateArea(r1));
     }
 }

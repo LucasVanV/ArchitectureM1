@@ -1,6 +1,6 @@
 package org.example.tp.o.enonce;
 
-public class RectangleCalculator implements ShapeCalculator{
+public class RectangleCalculator implements ShapeCalculatorI{
 
     @Override
     public double calculateArea(Shape shape) {

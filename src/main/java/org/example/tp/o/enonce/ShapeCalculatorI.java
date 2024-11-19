@@ -1,6 +1,6 @@
 package org.example.tp.o.enonce;
 
 
-public interface ShapeCalculator {
+public interface ShapeCalculatorI {
     public double calculateArea(Shape shape);
 }
